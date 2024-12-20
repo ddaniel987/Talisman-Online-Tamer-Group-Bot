@@ -1,0 +1,4 @@
+send 4
+left 1107, 222
+wait 13000
+send 0 1500

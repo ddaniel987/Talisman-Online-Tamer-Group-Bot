@@ -1,0 +1,24 @@
+--lua
+-- Video no Youtube:  https://youtu.be/DQYukHOsQ2s
+
+
+-- Colocar nome da imagem
+IMAGE_NAME = " petfood1 "
+
+
+-- Start
+msg("Mova o mouse em cima do item e aperte Enter ou Space")
+wait(200)
+local x, y = mouse_pos("abs")
+CAPTURE_SIZE = 16
+if x >= CAPTURE_SIZE and y >= CAPTURE_SIZE then
+    local startX = x - (CAPTURE_SIZE / 2)
+    local startY = y - (CAPTURE_SIZE / 2)
+    local address = getimage(startX, startY, startX + CAPTURE_SIZE, startY + CAPTURE_SIZE, "abs")
+    local filePath = [[Images\items\]] .. IMAGE_NAME .. ".bmp"
+    saveimage(address, filePath)
+    msg("Pronto!")
+    deleteimage(address)
+else
+    msg("Error")
+end

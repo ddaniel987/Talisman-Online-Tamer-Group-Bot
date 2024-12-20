@@ -1,0 +1,91 @@
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 4 500
+left 571, 194
+wait 12000
+send 0 1500

@@ -1,0 +1,3 @@
+--lua
+local NAME = 'INNOVATIVE000'
+local handle = findwindow(NAME)

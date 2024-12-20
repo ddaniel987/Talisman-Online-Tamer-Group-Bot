@@ -1,0 +1,2 @@
+--lua
+start_script(0)

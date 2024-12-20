@@ -1,0 +1,11 @@
+--lua
+local NAME = 'INNOVATIVE000'
+local handle = findwindow(NAME)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. NAME)
+end
+
+
+send(1)

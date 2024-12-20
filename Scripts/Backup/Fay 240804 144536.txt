@@ -1,0 +1,22 @@
+--lua
+log("clear") log("mode compact")
+local config = require("Modules/CONFIG")
+for k, v in pairs(config) do
+    _G[k] = v
+end
+
+local handle = findwindow(Fay)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. Fay)
+end
+
+local coords = {
+    SELF = {46, 49}
+}
+
+while true do
+   left(coords.SELF)
+   wait(5000)
+end

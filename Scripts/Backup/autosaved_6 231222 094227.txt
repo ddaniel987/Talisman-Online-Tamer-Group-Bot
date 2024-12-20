@@ -1,0 +1,10 @@
+--lua
+log("clear") log("mode compact")
+local save = require("Modules/pixel")
+
+IMAGE_NAME = " TESTE "
+
+
+save.imgSave(IMAGE_NAME)
+
+

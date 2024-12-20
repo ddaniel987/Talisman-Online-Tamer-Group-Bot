@@ -1,0 +1,33 @@
+--lua
+log("clear") log("mode compact")
+
+-- Bot settings
+LOW_HP = 0.9
+LOW_MP = 0.4
+FAIRY_BUFF_DELAY = 29
+PET_FOOD_DELAY = 49
+DELETER_BOT = "OFF"
+DELETER_DELAY = 20
+MINIMIZED_MODE = "OFF"
+
+SPOT_FARM = {520, 540}
+
+KILL_SANTA = "NO"   -- "YES" or "NO"
+
+GET_BACK_DELAY = 1
+-- (1 = 1 minute), (0.5 = 1/2 minute)
+
+
+
+-- Dependencies
+local bot = require("Modules/bot")
+local ptr = require("Modules/pointers")
+local util = require("Modules/utility")
+local char = require("Modules/fairyAtk")
+local cycle = require("Modules/cycle")
+
+
+-- Start bot
+bot.getReady(char)
+KILLS = 0
+while true do bot.start(char) end

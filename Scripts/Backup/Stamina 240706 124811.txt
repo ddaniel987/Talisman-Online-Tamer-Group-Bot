@@ -1,0 +1,68 @@
+--lua
+log("clear") log("mode compact")
+
+-- Bot settings m
+LOW_HP = 0.85
+BUFF_DELAY = 5
+PET_FOOD_DELAY = 49
+DELETER_BOT = "ON"
+DELETER_DELAY = 10
+MINIMIZED_MODE = "OFF"
+
+SPOT_FARM = {731, 277}
+
+KILL_SANTA = "NO"   -- "YES" or "NO"
+
+GET_BACK = "OFF"
+GET_BACK_DELAY = 1
+--(1 = 1 minute), (0.5 = 1/2 minute)
+
+
+
+-- Dependencies
+local bot = require("Modules/bot")
+local ptr = require("Modules/pointers")
+local util = require("Modules/utility")
+local char = require("Modules/stamina")
+local cycle = require("Modules/cycle")
+
+
+-- Start bot
+
+local TO = findwindow("Talisman Online")
+
+local CHAR_NAME_POINTER = readmem(0x01139C0C, "d")
+function charName()
+    local name = readmem(CHAR_NAME_POINTER + 0xBC, "s", 30)
+
+    -- If name is alphanumeric return it safely
+    if string.match(name, "^[%w]+$") then return name
+    else
+        -- Else read it with offset
+        return readmem(readmem(CHAR_NAME_POINTER + 0xBC, "d") + 0x0, "s", 30)
+    end
+end
+
+local name = charName()
+local wnd = workwindow()
+setwindowtext(wnd, name)
+
+bot.getReady(char)
+KILLS = 0
+while true do bot.start(char) end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

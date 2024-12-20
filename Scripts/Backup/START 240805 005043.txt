@@ -1,0 +1,7 @@
+--lua
+start_script(6, 3000)
+start_script(4)
+start_script(0) wait(5000)
+start_script(1) wait(5000)
+start_script(2) wait(5000)
+start_script(3) wait(5000)

@@ -1,0 +1,3 @@
+send 4 1000
+left 618, 253
+ddaddait 15000

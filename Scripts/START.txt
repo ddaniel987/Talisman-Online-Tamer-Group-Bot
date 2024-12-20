@@ -1,0 +1,7 @@
+--lua
+start_script(6, 5000)
+start_script(4)
+start_script(0)
+start_script(1)
+start_script(2)
+start_script(3)

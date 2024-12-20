@@ -1,0 +1,12 @@
+--lua
+local NAME = 'INNOVATIVE000'
+local handle = findwindow(NAME)
+
+if handle then
+    local edit = getwindow(handle[1][1], "child")
+    if edit then
+        workwindow(edit)
+    end
+else
+    log('cant find wiindow')
+end

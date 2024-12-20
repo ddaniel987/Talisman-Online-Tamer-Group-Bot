@@ -1,0 +1,26 @@
+--lua
+local cords = require("Modules/cords")
+
+stop = {690, 115}
+
+move(stop[1], stop[2])
+
+-- move(cords.move.stop[1], cords.move.stop[2])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

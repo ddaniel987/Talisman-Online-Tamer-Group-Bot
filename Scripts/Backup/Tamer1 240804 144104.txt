@@ -1,0 +1,35 @@
+--lua
+log("clear") log("mode compact")
+
+--EDIT BELOW / œ–ŒÃ≈Õﬂ… —¿ÃŒ “” 
+local CHAR_NAME = 'INNOVATIVE000'
+--TO HERE/ ƒŒ “” 
+
+local handle = findwindow(CHAR_NAME)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. CHAR_NAME)
+end
+
+
+local config = require("Modules/CONFIG")
+
+-- Ensure config is a table
+if type(config) ~= "table" then
+    error("Expected a table from CONFIG.lua, but got " .. type(config))
+end
+
+-- Make each configuration variable global
+for k, v in pairs(config) do
+    _G[k] = v
+end
+
+local bot = require("Modules/bot")
+local ptr = require("Modules/pointers")
+local util = require("Modules/utility")
+local char = require("Modules/mana")
+local cycle = require("Modules/cycle")
+bot.getReady(char)
+KILLS = 0
+while true do bot.start(char) end

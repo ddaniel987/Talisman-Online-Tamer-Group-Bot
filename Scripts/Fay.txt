@@ -1,0 +1,61 @@
+--lua
+log("clear") log("mode compact")
+local ptr = require("Modules/pointers")
+local config = require("Modules/CONFIG")
+local utility = require("Modules/utility")
+for k, v in pairs(config) do
+    _G[k] = v
+end
+
+local handle = findwindow(Fay)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. Fay)
+end
+
+
+local lastTime, interval = os.time(), 300
+local tamers = {config.Tamer1, config.Tamer2, config.Tamer3, config.Tamer4}
+
+while true do
+
+   --cure team based on hp reports
+   for i, tamer in ipairs(tamers) do
+	local tamerFile = io.open("chars/" .. tamer .. ".txt", "r")
+    if tamerFile then
+        local tamerHpPercent = tonumber(tamerFile:read("*all"))
+        tamerFile:close()
+		local avatarPositionXY = utility.getTeamMemberCoords(tamer)
+
+		left(avatarPositionXY[1], avatarPositionXY[2]) wait(100)
+
+		if(tamerHpPercent <= 100) then
+			send(CURE) wait(1600)
+		end
+
+		if(tamerHpPercent <= 70) then
+			send(HEAL) wait(1600)
+		end
+
+		send('P')
+    end
+   end
+
+	--cure self
+   left(coords.SELF[1], coords.SELF[2]) wait(200)
+   send(CURE) wait(1600) send('P')
+
+	--execute pet food
+    if os.time() - lastTime >= interval then
+        send(0) wait(1000)
+        lastTime = os.time()
+    end
+
+    --write current fay position
+    local lastPosFile = io.open("fayPos.txt", "w")
+    local currPos = ptr.getX() .. "," .. ptr.getY()
+    lastPosFile:write(currPos)
+    lastPosFile:close()
+end
+

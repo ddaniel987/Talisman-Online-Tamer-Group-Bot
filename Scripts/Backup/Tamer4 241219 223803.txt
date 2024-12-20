@@ -1,0 +1,22 @@
+--lua
+log("clear") log("mode compact")
+local config = require("Modules/CONFIG")
+for k, v in pairs(config) do
+    _G[k] = v
+end
+
+local handle = findwindow(Tamer4)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. Tamer4)
+end
+
+local bot = require("Modules/bot")
+local ptr = require("Modules/pointers")
+local util = require("Modules/utility")
+local char = require("Modules/mana")
+local cycle = require("Modules/cycle")
+bot.getReady(char)
+KILLS = 0
+while true do bot.start(char) end

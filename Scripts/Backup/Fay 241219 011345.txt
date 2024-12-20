@@ -1,0 +1,36 @@
+--lua
+log("clear") log("mode compact")
+local config = require("Modules/CONFIG")
+for k, v in pairs(config) do
+    _G[k] = v
+end
+
+local handle = findwindow(Fay)
+if handle then
+    workwindow(handle[1][1])
+else
+    log("Cant find window " .. Fay)
+end
+
+local coords = {
+    SELF = {46, 49},
+    TEAM1 = {24, 203 },
+    TEAM2 = {27, 285 },
+    TEAM3 = {26, 365 },
+    TEAM4 = {28, 444 }
+}
+
+while true do
+   left(coords.SELF[1], coords.SELF[2]) wait(200)
+   send(CURE) wait(1500) send('P')
+   left(coords.TEAM1[1], coords.TEAM1[2]) wait(200)
+   send(CURE) wait(1500) send('P')
+   left(coords.TEAM2[1], coords.TEAM2[2]) wait(200)
+   send(CURE) wait(1500) send('P')
+   left(coords.TEAM3[1], coords.TEAM3[2]) wait(200)
+   send(CURE) wait(1500) send('P')
+   left(coords.TEAM4[1], coords.TEAM4[2]) wait(200)
+   send(CURE) wait(1500) send('P')
+   wait(1000)
+   send(0) wait(1000)
+end

@@ -1,0 +1,27 @@
+--lua
+log("clear") log("mode compact")
+
+-- Bot settings
+LOW_HP = 0.4
+LOW_MP = 0.4
+BUFF_DELAY = 5
+PET_FOOD_DELAY = 49
+DELETER_BOT = "OFF"
+DELETER_DELAY = 35
+MINIMIZED_MODE = "OFF"
+
+SPOT_FARM = {530, 360}
+
+
+
+-- Dependencies
+local bot = require("Modules/bot")
+local ptr = require("Modules/pointers")
+local util = require("Modules/utility")
+local char = require("Modules/mana")
+local cycle = require("Modules/cycle")
+
+
+-- Start bot
+KILLS = 0
+while true do bot.start(char) end

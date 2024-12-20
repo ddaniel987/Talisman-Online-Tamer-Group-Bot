@@ -1,0 +1,9 @@
+--lua
+log("clear") log("mode compact")
+local save = require("Modules/save")
+local pixel = require("pixel")
+
+
+salvarImagemAoRedorDoMouse("imagem_ao_redor_do_mouse")
+
+
