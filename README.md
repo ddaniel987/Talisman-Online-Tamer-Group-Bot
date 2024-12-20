@@ -15,4 +15,5 @@ You need 4 tamers and 1 fay in team.
 3. First start NAMES script
 4. Initiate "START" script, and you are ready to go.
 
+To customize skills, go to Modules/keys.lua, in tamer object.
 All credit goes to Tony! This is just his bot reworked to support tamer groups. Happy botting!
